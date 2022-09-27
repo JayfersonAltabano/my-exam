@@ -3,6 +3,7 @@ package com.mybackenexam.backendexam.service.impl;
 import com.mybackenexam.backendexam.dto.SaveProductDTO;
 import com.mybackenexam.backendexam.model.ProductEntity;
 import com.mybackenexam.backendexam.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ProductServiceImpl {
 
     @Autowired
@@ -19,9 +21,9 @@ public class ProductServiceImpl {
 
 
     //add productList
-
     public ProductEntity saveProduct(SaveProductDTO saveProductDTO){
 
+        //set value of product entity
         ProductEntity productEntity = new ProductEntity();
         productEntity.setName(saveProductDTO.getName());
         productEntity.setSKU(saveProductDTO.getSKU());
@@ -32,8 +34,8 @@ public class ProductServiceImpl {
         productEntity.setCategoryId(saveProductDTO.getCategoryName());
 
         return productRepository.save(productEntity);
-
     }
+}
 
     //Show All Products
 //    public List<ProductEntity> listAllProducts(){
@@ -63,4 +65,4 @@ public class ProductServiceImpl {
 //        productRepository.deleteById(id);
 //        return "product deleted";
 //    }
-}
+

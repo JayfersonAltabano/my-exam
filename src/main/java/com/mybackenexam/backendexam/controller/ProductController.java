@@ -1,9 +1,7 @@
 package com.mybackenexam.backendexam.controller;
 
-import com.mybackenexam.backendexam.dto.SaveCategoryDTO;
 import com.mybackenexam.backendexam.dto.SaveProductDTO;
 import com.mybackenexam.backendexam.model.ProductEntity;
-import com.mybackenexam.backendexam.service.impl.ProductServiceImpl;
 import com.mybackenexam.backendexam.service.intf.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @Slf4j
 @RestController

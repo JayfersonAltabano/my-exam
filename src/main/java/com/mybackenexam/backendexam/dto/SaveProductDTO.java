@@ -11,8 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 public class SaveProductDTO {
 
-    private String SKU;
     private String name;
+    private String SKU;
     private String description;
     private String categoryName;
     private BigDecimal cost;
